@@ -7,7 +7,7 @@ import { Container, Button, Form, FormInput} from "shards-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
 
-function App() {
+function Todo() {
   //Setup todo list
   const [todoList, settodoList] = useState([
     {text: 'kenneth is the best'},
@@ -87,4 +87,4 @@ const deleteTodo = (todo) => {
   );
 }
 
-export default App;
+export default Todo;
