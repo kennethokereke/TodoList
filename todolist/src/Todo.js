@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import './App.css';
 
-import { Container, Button, Form, FormInput} from "shards-react";
+import { Container, Button, Form, FormInput, Row, Col} from "shards-react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "shards-ui/dist/css/shards.min.css"
@@ -65,14 +65,26 @@ const deleteTodo = (todo) => {
 
             </Form>
             <Container>
-          <Container className="TodoList">
-            {todoList.map((todo, index) => (
+          <Container className="TodoList" >
+            <Row>
+              <Col  sm="12" lg="6">
+              {todoList.map((todo, index) => (
               <span key={index}>
                 <p>{todo.text}</p>
-                <Button theme="success" onClick={() => deleteTodo(todo)}>Delete</Button>
+                <Container>
+                  <Row>
+                    <Col  sm="12" lg="6" >
+                    <Button theme="success" onClick={() => deleteTodo(todo)}>Delete</Button>
+                    </Col>
+                  </Row>
+                </Container>
+                
                 
               </span>
             ))}
+              </Col>
+            </Row>
+           
           </Container>
 
 
